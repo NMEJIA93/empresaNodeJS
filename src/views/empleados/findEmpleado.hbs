@@ -1,0 +1,73 @@
+<div class="cuerpoIndex">
+    <div class="cuerpo-derecho">
+
+        <ul class="lista-derecho">
+            <li><a href="http://localhost:8080/empleados">Registrar</a></li>
+            <li><a href="http://localhost:8080/empleados_find">Buscar</a></li>
+            <li><a href="http://localhost:8080/empleados_update">Actualizar</a></li>
+            <li><a href="http://localhost:8080/empleados_delete">Eliminar</a></li>
+        </ul>
+    </div>
+    <div class="cuerpo-izquierdo">
+        <form class="Form_find" action="/empleados_find" method="post" style="width:500px;">
+            <table class="table_form_find">
+                <tr></tr>
+                <td style="padding:0px;" class="td_resultados"><input type="number" id="Identificacion" name="id" placeholder="Cedula Empleado" value="{{resp.id}}">
+                </td>
+                <td align="left" class="td_resultados"><button type="submit"  class="btn btn-primary" >Consultar</button></td>
+            </table>
+        </form>
+            <div class="cardResultados">
+                <h6>Cedula: {{resp.id}}</h4>
+                    <hr />
+                    <h6>Nombre: {{resp.nombre}}</h4>
+                        <hr />
+                        <h6>Apellido: {{resp.apellido}}</h4>
+                            <hr />
+                            <h6>Email: {{resp.email}}</h4>
+
+            </div>
+
+            
+        {{!-- <div class="Find_empleado">
+            <div>
+                <form class="Form_find" action="/empleados_find" method="post" style="width:500px;">
+                    <table>
+                        <tr></tr>
+                        <td><input type="number" id="Identificacion" name="id" placeholder="Cedula" value="{{resp.id}}">
+                        </td>
+                        <td><button type="submit" class="btn btn-primary">Consultar</button></td>
+                    </table>
+                </form>
+
+            </div> --}}
+
+            {{!-- <div class="row resultados">
+
+
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body cardResultados">
+                            <h6>Cedula: {{resp.id}}</h4>
+                                <hr />
+                                <h6>Nombre: {{resp.nombre}}</h4>
+                                    <hr />
+                                    <h6>Apellido: {{resp.apellido}}</h4>
+                                        <hr />
+                                        <h6>Email: {{resp.email}}</h4>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div> --}}
+        </div>
+
+    </div>
+
+
+
+
+
+</div>

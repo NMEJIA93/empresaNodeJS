@@ -1,0 +1,100 @@
+<div class="cuerpoIndex">
+    <div class="cuerpo-derecho">
+
+        <ul class="lista-derecho">
+            <li><a href="http://localhost:8080/permisos">Registrar</a></li>
+            <li><a href="http://localhost:8080/permisos_listar">Buscar</a></li>
+            <li><a href="http://localhost:8080/permisos_update">Actualizar</a></li>
+            <li><a href="http://localhost:8080/Permisos_delete">Eliminar</a></li>
+        </ul>
+    </div>
+    <div class="cuerpo-izquierdo">
+        <form class="Form_find" action="/permisos_listar" method="post" style="width:500px;">
+            <table class="table_form_find">
+                <tr></tr>
+                <td style="padding:0px;" class="td_resultados"><input type="number" id="Identificacion"
+                        name="idConsulta" placeholder="Cedula" value="{{resp.id}}">
+                </td>
+                <td align="left" class="td_resultados"><button type="submit" class="btn btn-primary">Consultar</button>
+                </td>
+            </table>
+        </form>
+        <div class="cardResultadosPermisos">
+            <div class="container">
+                <h1>Listado de Permisos</h1>
+                <table class="table" style="width:70vw ;">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id Permiso</th>
+                            <th scope="col">Id Empleado</th>
+                            <th scope="col">Motivo</th>
+                            <th scope="col">Fecha Inicio</th>
+                            <th scope="col">Fecha Fin </th>
+                            <th scope="col">Observaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each resp}}
+                        <tr>
+                            <td>{{id_permiso}}</td>
+                            <td>{{id_empleado}}</td>
+                            <td>{{motivo}}</td>
+                            <td>{{fecha_inicio}}</td>
+                            <td>{{fecha_fin}}</td>
+                            <td>{{Observaciones}}</td>
+
+                            <td>
+                                <a href="#" class="btn btn-primary">Editar</a>
+                                <a href="#" class="btn btn-primary">Eliminar</a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+        {{!-- <div class="Find_empleado">
+            <div>
+                <form class="Form_find" action="/empleados_find" method="post" style="width:500px;">
+                    <table>
+                        <tr></tr>
+                        <td><input type="number" id="Identificacion" name="id" placeholder="Cedula" value="{{resp.id}}">
+                        </td>
+                        <td><button type="submit" class="btn btn-primary">Consultar</button></td>
+                    </table>
+                </form>
+
+            </div> --}}
+
+            {{!-- <div class="row resultados">
+
+
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body cardResultados">
+                            <h6>Cedula: {{resp.id}}</h4>
+                                <hr />
+                                <h6>Nombre: {{resp.nombre}}</h4>
+                                    <hr />
+                                    <h6>Apellido: {{resp.apellido}}</h4>
+                                        <hr />
+                                        <h6>Email: {{resp.email}}</h4>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div> --}}
+        </div>
+
+    </div>
+
+
+
+
+
+</div>

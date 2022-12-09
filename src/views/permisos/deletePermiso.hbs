@@ -1,0 +1,122 @@
+<div class="cuerpoIndex">
+    <div class="cuerpo-derecho">
+
+        <ul class="lista-derecho">
+            <li><a href="http://localhost:8080/permisos">Registrar</a></li>
+            <li><a href="http://localhost:8080/permisos_listar">Buscar</a></li>
+            <li><a href="http://localhost:8080/Permisos_update">Actualizar</a></li>
+            <li><a href="http://localhost:8080/Permisos_delete">Eliminar</a></li>
+        </ul>
+    </div>
+    <div class="cuerpo-izquierdo">
+        <form class="Form_Update" action="/permisos_delete" method="post" style="width:500px;">
+            <table class="table_form_Update">
+                <tr></tr>
+                <td style="padding:0px;" class="td_Update"><input type="number" id="Identificacion" name="idConsulta"
+                        placeholder="Id Permiso" value="{{resp.id_permiso}}">
+                </td>
+                <td align="left" class="td_Update"><button type="submit" class="btn btn-primary">Consultar</button>
+                </td>
+            </table>
+        </form>
+
+        <fieldset class="fieldset" ;
+            style=" margin:auto 10%; width:600px; border: 1px solid rgba(12, 97, 131, 0.774); ">
+            <legend style="color:  rgba(12, 97, 131, 1);">ELIMINAR PERMISOS</legend>
+            <form class="formulario_permiso" action="/permisos_delete?__method=DELETE" method="POST" style="width:500px;">
+                <input type="number" name="idPermiso" value="{{resp.id_permiso}}" readonly>
+                <input type="number" class="form-control" id="id_empleado" name="id_empleado" placeholder="Cedula Empleado" value="{{resp.id_empleado}}" readonly>
+                <input type="text" class="form-control" id="motivo_permiso" name="motivo_permiso" placeholder="Motivo"      value="{{resp.motivo}}" readonly>
+           {{!--      <table class="table_form_permisos">
+                    <tr>
+                        <td style="padding:0px;" class="td_Update">
+                            <label class="FechasPermisos" for="start">Fecha Inicio:</label>
+                            <input type="date" class="form-control" id="start" name="fecha_inicio" min="2010-01-01" max="2030-12-31" value="{{resp.fecha_inicio}}">
+                        </td>
+                        <td align="left" class="td_Update">
+                            <label class="FechasPermisos" for="startEnd">Fecha Fin:</label>
+                            <input type="date" id="startEnd" class="form-control" name="fecha_fin" min="2010-01-01" max="2030-12-31">
+                        </td>
+                    </tr>
+                </table> --}}
+                <textarea name="observaciones" id="Observaciones" class="form-control" placeholder="Observaciones" readonly> {{resp.Observaciones}} </textarea>
+                <input type="hidden" name="__method" value="DELETE">
+                <div class="div_bnt_registrarPermiso">
+                    <button class=" btn btn-primary  bnt_registrarPermiso" type="submit">Eliminar</button>
+                </div>
+
+                <br>
+
+
+            </form>
+        </fieldset>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!--
+<div class="">
+    <div>
+        <form class="row g-3" action="/empleados_update" method="post">
+            <div class="col-auto">
+                <label for="staticEmail2" class="visually-hidden">Identidicacion</label>
+                <input type="text" readonly class="form-control-plaintext" id="Identificacion" value="identificacion">
+            </div>
+            <div class="col-auto">
+                <label for="inputPassword2" class="visually-hidden">identificacipo</label>
+                <input type="number" class="form-control" id="Identificacion" name="idConsulta" placeholder="1236"
+                    value="{{resp.id}}">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Consultar</button>
+
+            </div>
+        </form>
+    </div>
+
+
+    <div class="formulariodiv">
+        <fieldset class="fieldsetInsert">
+            <legend>Modificar Empleado </legend>
+            <form action="/empleados_update?__method=PUT" method="POST">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Cedula</label>
+                    <input type="number" class="form-control" id="id" name="id" value="{{resp.id}}">
+
+                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" value="{{resp.nombre}}">
+
+                    <label for="exampleFormControlInput1" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" value="{{resp.apellido}}">
+
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" value="{{resp.email}}">
+                    <br>
+                    <input type="hidden" name="__method" value="PUT">
+                    <button type="submit" class="btn btn-primary  btn-block" id="btn-enviar">Modificar</button>
+
+                </div>
+            </form>
+
+        </fieldset>
+
+
+    </div> --}}

@@ -1,0 +1,25 @@
+@api = http://localhost:8080/
+
+###
+
+POST {{api}}empleados/registrar
+Content-Type: application/json
+
+{
+    "id": "3333",
+    "nombre": "Alonso2",
+    "apellido": "Cortes2",
+    "email": "2@gmail"
+}
+
+###
+
+PUT {{api}}empleados_update/1017
+Content-Type: application/json
+
+{
+    "id": "1017",
+    "nombre": "Norbey",
+    "apellido": "Cortes2",
+    "email": "2@gmail"
+}
